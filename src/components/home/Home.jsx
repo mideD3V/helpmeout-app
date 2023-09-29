@@ -1,10 +1,13 @@
 import React from "react";
 import "./home.css";
-import Logo from "../../assets/logo.png";
 import { Link } from "react-router-dom";
 import { BsArrowRight } from "react-icons/bs";
 
 // Image imports
+
+import Logo from "../../assets/logo.png";
+import Logo2 from "../../assets/logo2.png";
+
 import Img1 from "../../assets/AdobeStock1.png";
 import Img2 from "../../assets/AdobeStock_man.png";
 import Img3 from "../../assets/woman-2.png";
@@ -29,7 +32,7 @@ const Home = () => {
           <p>How it works</p>
         </navlinks>
 
-        <Link to="/" className="link">
+        <Link to="/login" className="link">
           Get started
         </Link>
       </nav>
@@ -141,12 +144,52 @@ const Home = () => {
             <img src={recPreview} alt="" />
           </div>
         </div>
-          </div>
-          
-          {/* FOOTER */}
-          <div id="footer">
-              
-          </div>
+      </div>
+
+      {/* FOOTER */}
+      <div id="footer">
+        <div>
+          <img src={Logo2} alt="logo 2" />
+        </div>
+        <div className="footer-menu footer-links">
+          <h4>Menu</h4>
+          <Link classsName="footer-link" to="/">
+            Home
+          </Link>
+          <Link classsName="footer-link" to="/">
+            Converter
+          </Link>
+          <Link classsName="footer-link" to="/">
+            How it Works
+          </Link>
+        </div>
+        <div className="footer-about footer-links">
+          <h4>About us</h4>
+
+          <Link classsName="footer-link" to="/">
+            About
+          </Link>
+          <Link classsName="footer-link" to="/">
+            Contact us
+          </Link>
+          <Link classsName="footer-link" to="/">
+            Privacy policy
+          </Link>
+        </div>
+        <div className="footer-record footer-links">
+          <h4>Screen Record</h4>
+
+          <Link classsName="footer-link" to="/">
+            Browser window
+          </Link>
+          <Link classsName="footer-link" to="/">
+            Desktop
+          </Link>
+          <Link classsName="footer-link" to="/">
+            Application
+          </Link>
+        </div>
+      </div>
     </div>
   );
 };

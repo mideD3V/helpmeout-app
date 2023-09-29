@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+
+  "name": "Help Me Out", 
+  "description": "Screen record app",
+  "version": "1.0.0",
+
+  "action":{
+    "default_popup": "index.html",
+  "default_title": "Help Me Out"
+
+  },
+  "permissions":[
+    "scripting"
+  ],
+  "host_permission":[
+    "https://*/",
+    "http://*/"
+  ]
+}
