@@ -31,7 +31,7 @@ const Login = () => {
             <img src={fbLogo} alt="" />
           </span>
           Continue with Facebook
-        </a> thank you hello
+        </a>
       </div>
 
       <div className="breaker">
@@ -42,7 +42,7 @@ const Login = () => {
 
       <form action="" id="signup-form">
         <label htmlFor="email">
-          Email
+          <span> Email</span>
           <input
             type="email"
             name="email"
@@ -51,7 +51,7 @@ const Login = () => {
           />
         </label>
         <label htmlFor="password">
-          Password
+          <span>Password </span>
           <input
             type="password"
             name="password"
@@ -59,7 +59,9 @@ const Login = () => {
             placeholder="Enter your password"
           />
         </label>
-        <button type="submit">Sign Up</button>
+        <Link to="/recording">
+          <button type="submit">Sign Up</button>
+        </Link>
       </form>
     </div>
   );

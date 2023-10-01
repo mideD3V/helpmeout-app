@@ -1,4 +1,3 @@
-import React from 'react'
 import "./App.css";
 import {
   ReactMediaRecorder,
@@ -12,33 +11,50 @@ import FullScreen from "./assets/monitor.png";
 import CurrentTab from "./assets/copy.png";
 import VideoCamera from "./assets/video-camera.png";
 import ToggleSwitch from "./Toggle";
-import { Link, Routes, Route } from 'react-router-dom';
+
+// import { ToggleButton } from "react-bootstrap";
+
+function App() {
 
 
+  async function startRecording() {
 
-const App = () => {
+    await navigator.mediaDevices.getDisplayMedia({
+      video: true,
+    })
+      .then((stream) => {
+        const recorder = new MediaRecorder(stream)
+        recorder.start()
+        const buffer = []
 
-    function recordFunc() {
+        recorder.addEventListener('dataavailable', (event) => {
+          buffer.push(event.data)
+          console.log(buffer)
+        })
 
-         document.body.innerHTML = "Hello Wprld";
-        //     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-        //     const activeTabId = tabs[0].id
-        //     chrome.scripting.executeScript({
-        //         target: { tabId: activeTabId },
-        //         function:()=>document.body.innerHTML="Hello Wprld"
-        //     })
-        // })
-    }
+        recorder.addEventListener('stop', () => {
+          const blob = new Blob(buffer)
 
-  const { status, startRecording, stopRecording, mediaBlobUrl } =
-    useReactMediaRecorder({ screen: true });
-  
-    return (
+          const downloadBtn = document.createElement('a')
+          downloadBtn.href = URL.createObjectURL(blob)
+          downloadBtn.download = 'recording.mp4'
+
+        })
+
+        setTimeout(() => {
+          recorder.stop()
+        },100_000)
+      })
+
+  }
+  return (
+    <>
+      {" "}
       <div className="App">
         <div className="header">
-          <div className="logo">
+          <logo>
             <img src={Logo} alt="logo" />
-          </div>
+          </logo>
           <div className="setting">
             <img src={Settings} alt="settings icon" />
             <img src={CloseTab} alt="settings icon" />
@@ -79,17 +95,18 @@ const App = () => {
         </div>
 
         <button className="record" onClick={startRecording}>
-         Start Recording 
+          Start Recording
         </button>
 
-        {/* <div className="controlRec">
-          <video src={mediaBlobUrl} autoPlay loop controls className='video-player'></video>
+        <div className="controlRec">
+          <video src={mediaBlobUrl} autoPlay loop controls></video>
           <p>{status}</p>
           <button onClick={startRecording}>Start</button>
           <button onClick={stopRecording}>Stop</button>
-        </div> */}
+        </div>
       </div>
-    );
+    </>
+  );
 }
 
-export default App
+export default App;

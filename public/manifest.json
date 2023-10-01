@@ -1,25 +1,29 @@
+
 {
-  "short_name": "HelpMeOut",
-  "name": "Help Me Out",
-  "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
+  "manifest_version": 3,
+
+  "name": "Help Me Screen Record", 
+  "description": "HelpMeOut: A Screen recording app for chrome users. Helps to record screens and save it for later use",
+  "version": "1.0.0.1",
+  "icons":{
+    "28": "logo-icon28.png"
+  },
+
+  "action":{
+    "default_popup": "index.html",
+  "default_title": "Help Me Record"
+
+  },
+  "permissions":[
+    "scripting",
+    "tabs",
+    "activeTab"
   ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+
+  "host_permissions":[
+    "https://*/*",
+    "http://*/"
+  ]
+
+
 }

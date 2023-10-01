@@ -1,12 +1,10 @@
 import React from "react";
 import "./home.css";
 import { Link } from "react-router-dom";
-import { BsArrowRight } from "react-icons/bs";
+// import { BsArrowRight } from "react-icons/bs";
 
 // Image imports
 
-import Logo from "../../assets/logo.png";
-import Logo2 from "../../assets/logo2.png";
 
 import Img1 from "../../assets/AdobeStock1.png";
 import Img2 from "../../assets/AdobeStock_man.png";
@@ -18,24 +16,13 @@ import shareIcon from "../../assets/Icon placeholder (1).png";
 import revisitIcon from "../../assets/Icon placeholder (2).png";
 import screenshot from "../../assets/Video Repository.png";
 import recPreview from "../../assets/rec-preview.svg.png";
+import Header from "../Header";
+import Footer from "../Footer";
 
 const Home = () => {
   return (
     <div id="home">
-      <nav>
-        <logo>
-          <img src={Logo} alt="help me out logo" />
-        </logo>
-
-        <navlinks>
-          <p>Features</p>
-          <p>How it works</p>
-        </navlinks>
-
-        <Link to="/login" className="link">
-          Get started
-        </Link>
-      </nav>
+      <Header/>
 
       <hero>
         <herotext>
@@ -47,7 +34,7 @@ const Home = () => {
           <button>
             Install HelpMeOut
             <span>
-              <BsArrowRight />
+              {/* <BsArrowRight /> */}
             </span>
           </button>
         </herotext>
@@ -126,7 +113,7 @@ const Home = () => {
             <img src={recPreview} alt="" />
           </div>
           <div className="how">
-            <span className="how-num">1</span>
+            <span className="how-num">2</span>
             <h3>Share Your Recording </h3>
             <p>
               We generate a shareable link for your video. Simply send it to
@@ -135,7 +122,7 @@ const Home = () => {
             <img src={recPreview} alt="" />
           </div>
           <div className="how">
-            <span className="how-num">1</span>
+            <span className="how-num">3</span>
             <h3>Learn Effortlessly</h3>
             <p>
               Recipients can access your video effortlessly through the provided
@@ -147,49 +134,7 @@ const Home = () => {
       </div>
 
       {/* FOOTER */}
-      <div id="footer">
-        <div>
-          <img src={Logo2} alt="logo 2" />
-        </div>
-        <div className="footer-menu footer-links">
-          <h4>Menu</h4>
-          <Link classsName="footer-link" to="/">
-            Home
-          </Link>
-          <Link classsName="footer-link" to="/">
-            Converter
-          </Link>
-          <Link classsName="footer-link" to="/">
-            How it Works
-          </Link>
-        </div>
-        <div className="footer-about footer-links">
-          <h4>About us</h4>
-
-          <Link classsName="footer-link" to="/">
-            About
-          </Link>
-          <Link classsName="footer-link" to="/">
-            Contact us
-          </Link>
-          <Link classsName="footer-link" to="/">
-            Privacy policy
-          </Link>
-        </div>
-        <div className="footer-record footer-links">
-          <h4>Screen Record</h4>
-
-          <Link classsName="footer-link" to="/">
-            Browser window
-          </Link>
-          <Link classsName="footer-link" to="/">
-            Desktop
-          </Link>
-          <Link classsName="footer-link" to="/">
-            Application
-          </Link>
-        </div>
-      </div>
+      <Footer/>
     </div>
   );
 };

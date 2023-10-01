@@ -1,42 +1,16 @@
-import React from 'react'
-import "./App.css";
-import {
-  ReactMediaRecorder,
-  useReactMediaRecorder,
-} from "react-media-recorder";
-
-import Logo from "./assets/logo.png";
-import Settings from "./assets/setting-2.png";
-import CloseTab from "./assets/close-circle.png";
-import FullScreen from "./assets/monitor.png";
-import CurrentTab from "./assets/copy.png";
-import VideoCamera from "./assets/video-camera.png";
-import ToggleSwitch from "./Toggle";
-import { Link, Routes, Route } from 'react-router-dom';
-
-
-
-const App = () => {
-
-    function recordFunc() {
-
-         document.body.innerHTML = "Hello Wprld";
-        //     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-        //     const activeTabId = tabs[0].id
-        //     chrome.scripting.executeScript({
-        //         target: { tabId: activeTabId },
-        //         function:()=>document.body.innerHTML="Hello Wprld"
-        //     })
-        // })
-    }
-
-  const { status, startRecording, stopRecording, mediaBlobUrl } =
-    useReactMediaRecorder({ screen: true });
-  
-    return (
-      <div className="App">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HElpMeOut2</title>
+</head>
+<body>
+    <div class="content">
+          <div className="App">
         <div className="header">
-          <div className="logo">
+          <div className='logo'>
             <img src={Logo} alt="logo" />
           </div>
           <div className="setting">
@@ -50,7 +24,7 @@ const App = () => {
         <div className="active-tab">
           <span>
             <img src={FullScreen} alt="full screen icon" />
-            <span style={{ color: "#928FAB" }}>Full screen</span>
+            <span style='color: "#928FAB"'>Full screen</span>
           </span>
 
           <span>
@@ -78,18 +52,20 @@ const App = () => {
           </div>
         </div>
 
-        <button className="record" onClick={startRecording}>
-         Start Recording 
+        <button className="record" onClick={recordFunc}>
+          Start Recording
         </button>
 
-        {/* <div className="controlRec">
+        <div className="controlRec">
           <video src={mediaBlobUrl} autoPlay loop controls className='video-player'></video>
           <p>{status}</p>
           <button onClick={startRecording}>Start</button>
           <button onClick={stopRecording}>Stop</button>
-        </div> */}
+        </div>
       </div>
-    );
-}
+        </div>
+    </div>
 
-export default App
+    <script src="./js/popup.js"></script>
+</body>
+</html>

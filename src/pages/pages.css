@@ -1,0 +1,151 @@
+.preview-ctn {
+  width: 100%;
+  padding: 5rem;
+  display: flex;
+
+  justify-content: space-between;
+}
+.name p{
+    color: var(--primary-color);
+}
+info {
+  flex: 45;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 3rem;
+}
+info label {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+label {
+  align-items: center;
+}
+label .info-input {
+  width: 100%;
+  background-color: rgba(182, 179, 198, 0.2);
+  padding: 1.5rem 1.5rem;
+  text-align: left;
+  border: none;
+  border-radius: 1rem;
+
+}
+.input2{
+    width: 100%;
+  padding: 1.5rem 1.5rem;
+  text-align: left;
+    background: none;
+  border-radius: 1rem;
+
+    border: 1px solid var(--primary-color);
+}
+label .send-btn {
+  padding: 0.75rem 1rem;
+  height: max-content;
+  margin-left: -6rem;
+  color: aliceblue;
+}
+
+
+
+.share {
+  display: flex;
+  flex-direction: column;
+}
+.share-ctn {
+  display: flex;
+  gap: 1rem;
+  justify-content: left;
+  width: 100%;
+}
+.share-ctn button {
+  background: none;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+label p {
+  display: block;
+  width: 100%;
+}
+.v-divider {
+  border-left: 1px solid grey;
+  height: 80vh;
+  width: 2px;
+}
+
+preview {
+  flex: 45;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: brown;
+}
+
+preview video{
+    width: 100%;
+    background-color: aqua;
+}
+
+.save{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    gap: 1rem;
+}
+.save button{
+    margin: 0 auto;
+}
+
+
+
+/* RECORDING PAGE */
+.recording{
+
+}
+
+.fb-cont{
+    width: 100%;
+}
+.rec-controls{
+    display: flex;
+    gap: 2.5rem;
+    justify-content: center;
+    align-items: center;
+    width: 52rem;
+    padding: 1.25rem 2.5rem;
+    position: absolute;
+    bottom: 0;
+    left: 2rem;
+}
+.ctrls{
+    display: flex;
+    width: 65%;
+    height: max-content;
+padding: .7rem 1rem ;
+justify-content: center;
+align-items: center;
+gap: 0.5rem;
+border-radius: 12.5rem;
+background: #141414;
+color: aliceblue;
+}
+.ctrls button{
+    display: flex;
+    width:max-content;
+}
+.ctrls .ctrl-img::after{
+    content: "";
+padding: .75rem .5rem;
+margin: auto;
+height: 4rem;
+border-right: 1px solid white;
+}
+.ctrl-btns{
+    transform: scale(.7);
+}

@@ -1,9 +1,4 @@
 import React from 'react'
-import "./App.css";
-import {
-  ReactMediaRecorder,
-  useReactMediaRecorder,
-} from "react-media-recorder";
 
 import Logo from "./assets/logo.png";
 import Settings from "./assets/setting-2.png";
@@ -12,28 +7,15 @@ import FullScreen from "./assets/monitor.png";
 import CurrentTab from "./assets/copy.png";
 import VideoCamera from "./assets/video-camera.png";
 import ToggleSwitch from "./Toggle";
-import { Link, Routes, Route } from 'react-router-dom';
+import { ReactMediaRecorder, useReactMediaRecorder } from 'react-media-recorder';
 
 
-
-const App = () => {
-
-    function recordFunc() {
-
-         document.body.innerHTML = "Hello Wprld";
-        //     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-        //     const activeTabId = tabs[0].id
-        //     chrome.scripting.executeScript({
-        //         target: { tabId: activeTabId },
-        //         function:()=>document.body.innerHTML="Hello Wprld"
-        //     })
-        // })
-    }
-
+const Popup = () => {
   const { status, startRecording, stopRecording, mediaBlobUrl } =
     useReactMediaRecorder({ screen: true });
-  
-    return (
+
+  return (
+    <div>
       <div className="App">
         <div className="header">
           <div className="logo">
@@ -79,17 +61,25 @@ const App = () => {
         </div>
 
         <button className="record" onClick={startRecording}>
-         Start Recording 
+          Start Recording
         </button>
 
-        {/* <div className="controlRec">
-          <video src={mediaBlobUrl} autoPlay loop controls className='video-player'></video>
+              <div className="controlRec">
+                
+          <video
+            src={mediaBlobUrl}
+            autoPlay
+            loop
+            controls
+            className="video-player"
+          ></video>
           <p>{status}</p>
           <button onClick={startRecording}>Start</button>
           <button onClick={stopRecording}>Stop</button>
-        </div> */}
+        </div>
       </div>
-    );
+    </div>
+  );
 }
 
-export default App
+export default Popup

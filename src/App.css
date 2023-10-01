@@ -1,22 +1,21 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-:root{
-  --primary-color:  #1B233D;
+:root {
+  --primary-color: #1b233d;
   --black: #141414;
---white:#fff;
---grey:#616163;
-
+  --white: #fff;
+  --grey: #616163;
 }
 
-button{
+button {
   display: flex;
   gap: 0.5rem;
   padding: 1rem 1.5rem;
-  background-color: #120B48;
+  background-color: #120b48;
   color: var(--white);
   border-radius: 8px;
   border: none;
@@ -24,26 +23,26 @@ button{
   cursor: pointer;
 }
 
-h1{
-    font-size: 4rem;
-    max-width: 70%;
-    color: var(--black);
+h1 {
+  font-size: 4rem;
+  max-width: 70%;
+  color: var(--black);
 }
-h2{
+h2 {
   font-size: 2.5rem;
-text-align: center;
+  text-align: center;
 }
-h3{
+h3 {
   font-size: 1.75rem;
   color: var(--primary-color);
 }
 
-p{
+p {
   font-size: 1.25rem;
   color: var(--grey);
-  letter-spacing: .1px;
+  letter-spacing: 0.1px;
 }
-.link{
+.link {
   text-decoration: none;
   font-size: 1.25rem;
   color: var(--black);

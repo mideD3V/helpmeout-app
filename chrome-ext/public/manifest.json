@@ -2,8 +2,11 @@
   "manifest_version": 3,
 
   "name": "Help Me Out", 
-  "description": "Screen record app",
+  "description": "HelpMeOut: A Screen recording app for chrome users. Helps to record screens and save it for later use",
   "version": "1.0.0",
+  "icons":{
+    "28": "logo-icon28.png"
+  },
 
   "action":{
     "default_popup": "index.html",
@@ -11,10 +14,15 @@
 
   },
   "permissions":[
-    "scripting"
+    "scripting",
+    "tabs",
+    "activeTab"
   ],
-  "host_permission":[
-    "https://*/",
+
+  "host_permissions":[
+    "https://*/*",
     "http://*/"
   ]
+
+
 }

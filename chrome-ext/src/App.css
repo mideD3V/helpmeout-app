@@ -1,38 +1,112 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 .App {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: blanchedalmond;
+  width: 30%;
+  margin: 0 auto;
+  width: 18.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+
+  border-radius: 1.5rem;
+  background: #fff;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+.logo img {
+  width: 8.25rem;
+}
+
+.setting {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.setting img {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.header p {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.active-tab {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.active-tab span {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  align-items: center;
+}
+.active-tab span img {
+  width: 2rem;
 }
 
-.App-link {
-  color: #61dafb;
+.toggle-ctn {
+  display: flex;
+  border: 1px solid #1b233d;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.toggle-ctn span {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.permit {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+.App button {
+  background-color: #1b233d;
+  color: aliceblue;
+  padding: 1rem;
+  width: 100%;
+  border-radius: 0.75rem;
+  border: none;
+  font-size: 1.25rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App button:hover{
+  color: #1b233d;
+  background-color: #fff;
+  border: 1px solid #1b233d;
+  cursor: pointer;
+}
+
+.controlRec{
+  background-color: #1b233d;
+  color: #fff;
+  padding: 1rem;
+
+  /* position: absolute; */
+  
+}
+
+.video-player{
+  width: 50vw;
 }
